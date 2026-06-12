@@ -128,9 +128,9 @@ The state machine:
 | `Notification`     | 🟡 `waiting` | Needs permission or input |
 | `Stop`             | 🟢 `idle`    | Turn finished — your move |
 
-> Claude Code reads hooks at session start, so sessions already running when you
-> add the hooks won't report status until restarted. New sessions report
-> automatically.
+> Claude Code reloads `hooks` dynamically — no restart needed. Sessions that are
+> already running start reporting status on their next event once the hooks are
+> added.
 
 ## Options
 
